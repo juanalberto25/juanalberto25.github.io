@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Matemáticas - Página Principal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    header img {
+      width: 80px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .titulo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .titulo h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .titulo p {
+      margin: 5px 0 0 0;
+      font-size: 18px;
+    }
+
+    .panel-lateral {
+      background-color: #e1eaff;
+      width: 220px;
+      padding: 20px 10px;
+      box-sizing: border-box;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 140px;
+    }
+
+    .panel-lateral button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 12px;
+      width: 100%;
+    }
+
+    .panel-lateral button:hover {
+      background-color: #357ac9;
+    }
+
+    .contenido {
+      margin-left: 240px;
+      padding-bottom: 80px;
+    }
+
+    .seccion {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .seccion h2 {
+      color: #4a90e2;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #mensajeActividad {
+      margin: 20px auto;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #444;
+      max-width: 700px;
+    }
+
+    footer {
+      background-color: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      left: 240px;
+      width: calc(100% - 240px);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .panel-lateral {
+        display: none;
+      }
+
+      .contenido {
+        margin-left: 0;
+      }
+
+      footer {
+        left: 0;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="panel-lateral">
+    <button onclick="mostrarActividad()">🎲 Actividad Aleatoria</button>
+    <button onclick="abrirGenially()">📊 Quiz Interactivo (Genially)</button>
+  </div>
+
+  <div class="contenido">
+    <header>
+      <img src="logomat.png" alt="Logo Matemáticas">
+      <div class="titulo">
+        <h1>Asignatura: Matemáticas</h1>
+        <p>Docente: Prof. Juan A. Rodríguez</p>
+      </div>
+    </header>
+
+    <div id="mensajeActividad"></div>
+
+    <section class="seccion">
+      <h2>Presentación</h2>
+      <p>La asignatura de Matemáticas promueve el desarrollo del pensamiento lógico, la resolución de problemas y el razonamiento numérico mediante actividades significativas y cotidianas.</p>
+
+      <h2>Objetivos de Aprendizaje</h2>
+      <ul>
+        <li>Comprender y aplicar conceptos básicos de aritmética, álgebra y geometría.</li>
+        <li>Desarrollar habilidades de resolución de problemas mediante estrategias matemáticas.</li>
+        <li>Interpretar y analizar datos utilizando herramientas estadísticas básicas.</li>
+      </ul>
+
+      <h2>✔ Recursos Educativos</h2>
+      <ul>
+        <li><a href="https://drive.google.com/file/d/117HFC224ila0hvJplCExNdWBjL3XxDEr/view?usp=sharing" target="_blank">📄 Guía de estudio - Números y Operaciones (PDF)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=EKeMeKv8c-I" target="_blank">🎬 Video: Introducción a Álgebra</a></li>
+        <li><a href="https://www.khanacademy.org/math" target="_blank">🌐 Khan Academy - Matemáticas</a></li>
+        <li><a href="https://www.matematicasonline.es/pdf/ejercicios/3_ESO/Ejercicios%20de%20Estadistica.pdf" target="_blank">📄 Ejercicios de repaso - Estadística (PDF)</a></li>
+      </ul>
+    <h2>👥 Participantes</h2>
+    <ul>
+      <li>Ana Denís Montero, 2024-0112</li>
+      <li>Ysamar Paulino Acosta, 2024-0094</li>
+      <li>Pedro Agustín Morel Reyes, 2024-0106</li>
+      <li>Ramón Montero Félix, 2024-0110</li>
+      <li>Juan Alberto Ortiz Mazara, jo51126</li>
+    </ul>
+    <h2>👥 Creadores de esta página web:</h2>
+    <ul>
+      <li>Ana Denís Montero, 2024-0112</li>
+      <li>Ysamar Paulino Acosta, 2024-0094</li>
+      <li>Pedro Agustín Morel Reyes, 2024-0106</li>
+      <li>Ramón Montero Félix, 2024-0110</li>
+      <li>Juan Alberto Ortiz Mazara, jo51126</li>
+    </ul>
+    </section>
+  </div>
+
+  <footer>
+    📧 Contacto: juan.rodriguez@colegiosimulacion.edu | Tel: (000) 123-4567
+  </footer>
+
+  <script>
+    function mostrarActividad() {
+      const actividades = [
+        "Resuelve: ¿Cuál es el MCD de 36 y 48?",
+        "Convierte 0.75 a fracción.",
+        "Calcula el área de un triángulo de base 10 cm y altura 5 cm.",
+        "Simplifica la fracción 18/24.",
+        "Resuelve la ecuación: 3x - 5 = 10.",
+        "¿Cuál es la media de los números: 8, 12, 14, 10?",
+        "Grafica la función y = 2x + 3 (usa tu cuaderno).",
+        "Convierte 150° a radianes.",
+        "Expresa 3/4 como porcentaje.",
+        "Resuelve: Si 5 lápices cuestan $10, ¿cuánto cuestan 8?"
+      ];
+      const aleatoria = actividades[Math.floor(Math.random() * actividades.length)];
+      document.getElementById("mensajeActividad").textContent = aleatoria;
+    }
+
+    function abrirGenially() {
+      window.open("https://view.genially.com/683af21359f7371b93d137a4/interactive-content-quiz-interpretacion-de-graficos-estadisticos", "_blank");
+    }
+  </script>
+
+</body>
+</html>
