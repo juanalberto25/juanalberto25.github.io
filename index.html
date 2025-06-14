@@ -49,7 +49,7 @@
       font-size: 18px;
     }
 
-    .panel-lateral {
+    .panel-lateral, .panel-derecho {
       background-color: #e1eaff;
       width: 220px;
       padding: 20px 10px;
@@ -57,11 +57,18 @@
       height: 100vh;
       position: fixed;
       top: 0;
-      left: 0;
       padding-top: 140px;
     }
 
-    .panel-lateral button {
+    .panel-lateral {
+      left: 0;
+    }
+
+    .panel-derecho {
+      right: 0;
+    }
+
+    .panel-lateral button, .panel-derecho button {
       background-color: #4a90e2;
       color: white;
       border: none;
@@ -73,13 +80,14 @@
       width: 100%;
     }
 
-    .panel-lateral button:hover {
+    .panel-lateral button:hover, .panel-derecho button:hover {
       background-color: #357ac9;
     }
 
     .contenido {
       margin-left: 240px;
-      padding-bottom: 80px;
+      margin-right: 240px;
+      padding-bottom: 100px;
     }
 
     .seccion {
@@ -119,6 +127,19 @@
       max-width: 700px;
     }
 
+    .creadores {
+      background-color: #eef5ff;
+      padding: 20px 30px;
+      margin: 30px auto;
+      max-width: 800px;
+      border-left: 4px solid #4a90e2;
+    }
+
+    .creadores h3 {
+      margin-top: 0;
+      color: #4a90e2;
+    }
+
     footer {
       background-color: #4a90e2;
       color: white;
@@ -127,17 +148,19 @@
       position: fixed;
       bottom: 0;
       left: 240px;
-      width: calc(100% - 240px);
+      width: calc(100% - 480px); /* 240 izquierda + 240 derecha */
       font-size: 14px;
     }
 
     @media (max-width: 768px) {
-      .panel-lateral {
+      .panel-lateral,
+      .panel-derecho {
         display: none;
       }
 
       .contenido {
         margin-left: 0;
+        margin-right: 0;
       }
 
       footer {
@@ -149,17 +172,26 @@
 </head>
 <body>
 
+  <!-- Panel lateral izquierdo -->
   <div class="panel-lateral">
     <button onclick="mostrarActividad()">🎲 Actividad Aleatoria</button>
     <button onclick="abrirGenially()">📊 Quiz Interactivo (Genially)</button>
   </div>
 
+  <!-- Panel lateral derecho -->
+  <div class="panel-derecho">
+    <button onclick="window.open('https://es.khanacademy.org/math/arithmetic', '_blank')">📘 Teoría de Apoyo</button>
+    <button onclick="window.open('https://www.mundoprimaria.com/juegos-matematicas', '_blank')">🧮 Juegos Matemáticos</button>
+    <button onclick="window.open('https://drive.google.com/drive/folders/1A2B3C4D5E?usp=sharing', '_blank')">📥 Descargas Útiles</button>
+  </div>
+
+  <!-- Contenido principal -->
   <div class="contenido">
     <header>
       <img src="logomat.png" alt="Logo Matemáticas">
       <div class="titulo">
         <h1>Asignatura: Matemáticas</h1>
-        <p>Docente: Prof. Julio Rodriguez (grupo 3)</p>
+        <p>Docente: Prof. Juan A. Rodríguez</p>
       </div>
     </header>
 
@@ -183,16 +215,18 @@
         <li><a href="https://www.khanacademy.org/math" target="_blank">🌐 Khan Academy - Matemáticas</a></li>
         <li><a href="https://www.matematicasonline.es/pdf/ejercicios/3_ESO/Ejercicios%20de%20Estadistica.pdf" target="_blank">📄 Ejercicios de repaso - Estadística (PDF)</a></li>
       </ul>
-    
-    <h2>👥 Creadores de esta página web:</h2>
-    <ul>
-      <li>Ana Denís Montero, 2024-0112</li>
-      <li>Ysamar Paulino Acosta, 2024-0094</li>
-      <li>Pedro Agustín Morel Reyes, 2024-0106</li>
-      <li>Ramón Montero Félix, 2024-0110</li>
-      <li>Juan Alberto Ortiz Mazara, jo51126</li>
-    </ul>
     </section>
+
+    <div class="creadores">
+      <h3>👥 Creadores de esta página web:</h3>
+      <ul>
+        <li>Ana Denís Montero, 2024-0112</li>
+        <li>Ysamar Paulino Acosta, 2024-0094</li>
+        <li>Pedro Agustín Morel Reyes, 2024-0106</li>
+        <li>Ramón Montero Félix, 2024-0110</li>
+        <li>Juan Alberto Ortiz Mazara, jo51126</li>
+      </ul>
+    </div>
   </div>
 
   <footer>
